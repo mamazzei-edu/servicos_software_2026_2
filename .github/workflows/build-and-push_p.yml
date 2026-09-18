@@ -66,7 +66,7 @@ jobs:
       - name: Construir e publicar ${{ matrix.servico }}
         uses: docker/build-push-action@v6
         with:
-          context: passo-a-passo-visao_/${{ matrix.contexto }}
+          context: passo-a-passo-visao_p/${{ matrix.contexto }}
           push: ${{ github.event_name != 'pull_request' }}
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/${{ matrix.servico }}:v1.0
